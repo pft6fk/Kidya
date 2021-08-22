@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Доставка"
+        android:textSize="16sp"
+        android:textFontWeight="600"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        >
+
+        <TextView
+            android:id="@+id/text_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:alpha="0.5"
+            android:layout_marginVertical="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum faucibus ultrices dolor quis elementum donec maecenas tempus, tristique. Libero vulputate sed id fusce risus mollis. Nullam tellus integer curabitur ac sapien eget volutpat. Nibh odio nisl lorem lacus. Proin parturient enim facilisis nulla. Aliquam et duis at egestas non in pellentesque sed eu. Sed."            />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/refund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Возврат"
+        android:textSize="16sp"
+        android:textFontWeight="600"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        >
+
+        <TextView
+            android:id="@+id/text_refund"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:alpha="0.5"
+            android:layout_marginVertical="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta amet, fringilla et. Ridiculus vitae et aliquet scelerisque eros et non tellus. Dolor venenatis in et, tortor orci feugiat quam massa. Neque blandit vestibulum scelerisque porta est malesuada scelerisque purus vitae. Quis in erat amet quis posuere rhoncus nibh cum. Tellus ullamcorper mi est at cursus. Aliquam, pellentesque massa, enim dapibus.
+Ipsum mauris diam vivamus faucibus congue proin in. Facilisis maecenas eleifend sit dui enim ipsum, turpis varius. Blandit at lorem velit felis. Ante egestas habitasse ullamcorper elementum. Aliquam ultricies cras eget."            />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

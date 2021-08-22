@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment"
+    >
+
+<!--    поиск товаров-->
+    <FrameLayout
+        android:id="@+id/goToFav"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@color/mainColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/ic_icon___search"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/border_lines"
+            android:backgroundTint="@color/white"
+            android:hint="@string/search_hint"
+            android:textColorHint="#BF262C6C"
+            android:paddingStart="18dp"
+            android:paddingEnd="16dp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/banner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            Скидки-->
+            <TextView
+                android:id="@+id/text_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mainText"
+                android:layout_marginTop="24dp"
+                android:text="@string/menu_sale"
+                android:textColor="@color/textColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+            <ImageView
+                android:id="@+id/arrow_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="27dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintStart_toEndOf="@id/text_sale"
+                app:layout_constraintTop_toBottomOf="@id/banner" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/saleRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_goneMarginStart="16dp"
+                android:layout_marginTop="12dp"
+                app:layout_goneMarginEnd="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_sale"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_product"/>
+
+<!--            выгодные предложения-->
+
+            <TextView
+                android:id="@+id/text_offer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_offer"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@id/saleRecycler"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintBottom_toBottomOf="@id/text_offer"
+                app:layout_constraintStart_toEndOf="@id/text_offer" />
+            <ImageView
+                android:id="@+id/offer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/box1"
+                app:layout_constraintStart_toStartOf="@+id/offer3"
+                app:layout_constraintTop_toBottomOf="@id/text_offer" />
+            <ImageView
+                android:id="@+id/offer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/box2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toEndOf="@id/offer1"
+                app:layout_constraintTop_toTopOf="@+id/offer1" />
+            <ImageView
+                android:id="@+id/offer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/box3"
+
+                app:layout_constraintEnd_toStartOf="@+id/offer4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/offer4" />
+            <ImageView
+                android:id="@+id/offer4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/box4"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/offer3"
+                app:layout_constraintTop_toBottomOf="@id/offer2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--            новинки-->
+            <TextView
+                android:id="@+id/id_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/news"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/offer3" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintBottom_toBottomOf="@id/id_news"
+                app:layout_constraintStart_toEndOf="@id/id_news" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newArrivalsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_news"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_product"/>
+
+
+<!--             баннер 2-->
+            <ImageView
+
+                android:id="@+id/banner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/banner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newArrivalsRecycler" />
+
+<!--            Популярные бренды-->
+            <TextView
+                android:id="@+id/popular_brends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/popular_brend"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner1" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintBottom_toBottomOf="@id/popular_brends"
+                app:layout_constraintStart_toEndOf="@id/popular_brends" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/brand_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/popular_brends"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_popular_brends"
+                />
+
+<!--            Рекоммендуемые товары1-->
+            <TextView
+                android:id="@+id/recommended_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recommend"
+                android:textSize="16sp"
+
+                android:textColor="@color/textColor"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/brand_recycler"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintBottom_toBottomOf="@id/recommended_goods"
+                app:layout_constraintStart_toEndOf="@id/recommended_goods" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommended_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/recommended_goods"
+                app:layout_constraintStart_toStartOf="parent"
+
+                tools:itemCount="1"
+                tools:listitem="@layout/item_product"
+                />
+
+<!--            популярные категории-->
+            <TextView
+                android:id="@+id/text_popular_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_category"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/recommended_recycler"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintBottom_toBottomOf="@id/text_popular_category"
+                app:layout_constraintStart_toEndOf="@id/text_popular_category" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/text_popular_category"
+                app:layout_constraintStart_toStartOf="parent"
+
+                tools:itemCount="1"
+                tools:listitem="@layout/item_popular_category"
+                />
+
+            <!--            Новости-->
+            <TextView
+                android:id="@+id/text_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_news"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@id/popular_category"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintBottom_toBottomOf="@id/text_news"
+                app:layout_constraintStart_toEndOf="@id/text_news" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/text_news"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_news"
+                />
+
+<!--            рекоммендуемые товары2-->
+            <TextView
+                android:id="@+id/recommended_goods1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recommend"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/news_recycler"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_bi_arrow_right_circle"
+                app:layout_constraintBottom_toBottomOf="@id/recommended_goods1"
+                app:layout_constraintStart_toEndOf="@id/recommended_goods1" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommended_recycler1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/recommended_goods1"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_product"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

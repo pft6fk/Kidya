@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"><!--        app:layoutDescription="@xml/item_notification_scene">-->
+
+        <TextView
+            android:id="@+id/new_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_view_percent"
+            android:text="NEW"
+            android:textColor="@color/white"
+
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/colse_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.5"
+            android:text="10.10.2021"
+            android:textColor="@color/textColor"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_news" />
+
+        <TextView
+            android:id="@+id/short_content_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus semper quis nisl elementum ac suspendisse. Amet, aliquet nisl quis tempor adipiscing libero. Potenti in volutpat nunc, non, non nibh. Sollicitudin eu, nulla vestibulum ultrices nunc facilisi. Cursus velit nisi ac netus nunc. Adipiscing mattis posuere massa, aenean aliquet sit vestibulum. Scelerisque feugiat urna vitae venenatis. Sed blandit donec mi a semper amet sit fermentum.
+Justo faucibus sollicitudin sapien posuere egestas in et enim. Vel purus libero ultrices risus, donec fusce laoreet luctus nec. Bibendum nisi interdum morbi lectus. Porttitor magna nulla tortor, senectus vulputate parturient. Consequat enim adipiscing vitae tellus egestas dictum. Sed sit curabitur semper amet integer. Massa platea magna ipsum sit. Sollicitudin rhoncus, enim ornare sit. Ut pellentesque morbi condimentum tincidunt dictum. Sed mi libero eget quam ac. Ac dui, duis ac massa nibh ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis vulputate vel massa, sodales at vulputate neque imperdiet. Libero et libero arcu enim eu nec. Enim turpis gravida sed pulvinar rhoncus magna neque. Volutpat posuere neque, fermentum velit orci enim sollicitudin convallis scelerisque convallis scelerisque convallis.  "
+            android:textColor="@color/textColor"
+            android:maxLines="5"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_news" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/short_content_news">
+
+            <TextView
+                android:id="@+id/more_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="Подробно"
+                android:textColor="@color/mainColor"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/info_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_chevron"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/more_info"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

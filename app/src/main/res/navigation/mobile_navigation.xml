@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+     app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.kidya.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"
+        app:startDestination="@id/action_navigation_home_to_newsFragment">
+
+        <action
+            android:id="@+id/action_navigation_home_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_navigation_home_self"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_home_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_insideNewsFragment"
+            app:destination="@id/insideNewsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_subcategory"
+            app:destination="@id/subcategory" />
+        <action
+            android:id="@+id/action_navigation_home_to_myDataFragment"
+            app:destination="@id/myDataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.kidya.ui.appBar.NotificationFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.kidya.ui.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+         <action
+            android:id="@+id/action_newsFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_newsFragment_to_insideNewsFragment"
+            app:destination="@id/insideNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.kidya.ui.catalog.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_subcategory"
+            app:destination="@id/subcategory" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="com.example.kidya.ui.favourite.FavouriteFragment"
+        android:label="FavFragment"
+        tools:layout="@layout/fragment_favourite">
+        <action
+            android:id="@+id/action_navigation_favourite_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insideNewsFragment"
+        android:name="com.example.kidya.ui.news.InsideNewsFragment"
+        android:label="InsideNewsFragment"
+        tools:layout="@layout/fragment_inside_news"/>
+    <fragment
+        android:id="@+id/subcategory"
+        android:name="com.example.kidya.ui.catalog.subcategory.Subcategory"
+        android:label="fragment_subcategory"
+        tools:layout="@layout/fragment_subcategory" >
+        <action
+            android:id="@+id/action_subcategory_to_ClotheCategoryFragment"
+            app:destination="@id/clotheCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clotheCategoryFragment"
+        android:name="com.example.kidya.ui.catalog.subcategory.clotheCategory.ClotheCategoryFragment"
+        android:label="fragment_clothe_category"
+        tools:layout="@layout/fragment_clothe_category" >
+        <action
+            android:id="@+id/action_clotheCategoryFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_clotheCategoryFragment_to_bottomSheetFilterFragment"
+            app:destination="@id/bottomSheetFilterFragment" />
+    </fragment>
+      <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.kidya.ui.product.ProductFragment"
+        android:label="ProductFragment"
+        tools:layout="@layout/fragment_product"  >
+         <action
+             android:id="@+id/action_productFragment_to_deliveryFragment"
+             app:destination="@id/deliveryFragment" />
+         <action
+             android:id="@+id/action_productFragment_to_infoFragment"
+             app:destination="@id/infoFragment" />
+         <action
+             android:id="@+id/action_productFragment_to_ratingFragment"
+             app:destination="@id/ratingFragment" />
+         <action
+             android:id="@+id/action_productFragment_self"
+             app:destination="@id/productFragment" />
+          <action
+              android:id="@+id/action_productFragment_to_messagesFragment"
+              app:destination="@id/messagesFragment" />
+      </fragment>
+    <fragment
+        android:id="@+id/deliveryFragment"
+        android:name="com.example.kidya.ui.product.delivery.DeliveryFragment"
+        android:label="DeliveryFragment"
+        tools:layout="@layout/fragment_delivery"/>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.kidya.ui.product.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info"/>
+    <fragment
+        android:id="@+id/ratingFragment"
+        android:name="com.example.kidya.ui.product.rating.RatingFragment"
+        android:label="fragment_rating"
+        tools:layout="@layout/fragment_rating" >
+        <action
+            android:id="@+id/action_ratingFragment_to_makeReviewFragment"
+            app:destination="@id/makeReviewFragment" />
+    </fragment>
+     <fragment
+         android:id="@+id/navigation_basket"
+         android:name="com.example.kidya.ui.basket.BasketFragment"
+         android:label="BasketFragment"
+         tools:layout="@layout/fragment_basket">
+         <action
+             android:id="@+id/action_navigation_basket_to_productFragment"
+             app:destination="@id/productFragment" />
+         <action
+             android:id="@+id/action_navigation_basket_to_orderFragment"
+             app:destination="@id/makeOrderFragment" />
+     </fragment>
+     <fragment
+        android:id="@+id/makeOrderFragment"
+        android:name="com.example.kidya.ui.basket.order.MakeOrderFragment"
+        android:label="OrderFragment"
+         tools:layout="@layout/fragment_make_order">
+        <action
+            android:id="@+id/action_orderFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+         <action
+             android:id="@+id/action_orderFragment_to_viewPagerFragment"
+             app:destination="@id/viewPagerFragment" />
+     </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.kidya.ui.menu.orders.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_moreHistoryOrderFragment"
+            app:destination="@id/moreHistoryOrderFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_moreOngoingOrderFragment"
+            app:destination="@id/moreOngoingOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreHistoryOrderFragment"
+        android:name="com.example.kidya.ui.menu.orders.onboarding.page.historyData.details.MoreHistoryOrderFragment"
+        android:label="fragment_more_history_order"
+        tools:layout="@layout/fragment_more_history_order" />
+    <fragment
+        android:id="@+id/moreOngoingOrderFragment"
+        android:name="com.example.kidya.ui.menu.orders.onboarding.page.ongoingData.details.MoreOngoingOrderFragment"
+        android:label="MoreOngoingOrderFragment"
+        tools:layout="@layout/fragment_more_ongoing_order"/>
+    <fragment
+        android:id="@+id/myDataFragment"
+        android:name="com.example.kidya.ui.menu.myData.MyDataFragment"
+        android:label="MyDataFragment"
+        tools:layout="@layout/fragment_my_data">
+        <action
+            android:id="@+id/action_myDataFragment_to_childAddFragment"
+            app:destination="@id/childAddFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFilterFragment"
+        android:name="com.example.kidya.ui.catalog.subcategory.clotheCategory.BottomSheetFilterFragment"
+        android:label="BottomSheetFilterFragment" >
+        <action
+            android:id="@+id/action_bottomSheetFilterFragment_to_clotheCategoryFragment"
+            app:destination="@id/clotheCategoryFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/makeReviewFragment"
+        android:name="com.example.kidya.ui.product.rating.MakeReviewFragment"
+        android:label="MakeReviewFragment"
+        tools:layout="@layout/fragment_make_review">
+        <action
+            android:id="@+id/action_makeReviewFragment_to_ratingFragment"
+            app:destination="@id/ratingFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/childAddFragment"
+        android:name="com.example.kidya.ui.menu.myData.ChildAddFragment"
+        android:label="ChildAddFragment"
+        tools:layout="@layout/fragment_child_add">
+        <action
+            android:id="@+id/action_childAddFragment_to_myDataFragment"
+            app:destination="@id/myDataFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.kidya.ui.menu.messages.MessagesFragment"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+</navigation>

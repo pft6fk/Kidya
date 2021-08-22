@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Kidya</string>
+    <string name="title_home">Главная</string>
+    <string name="title_category">Категрии</string>
+    <string name="auth">Авторизация</string>
+    <string name="authorize1">Авторизироваться</string>
+    <string name="info_auth">Для продолжения покупки пожалуйста авторизуйтесь через номер телефона</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="get_sms">Получить смс-код</string>
+    <string name="one_more_sms">Отправить код ещё раз</string>
+    <string name="input_sms">Смс-код</string>
+    <string name="error_num">Номер не введён или не верен</string>
+    <string name="search_hint">Поиск товаров</string>
+    <!--variables for menu-->
+    <string name="menu_auth">Авторизоваться</string>
+    <string name="menu_myData">Мои данные</string>
+    <string name="menu_myOrders">Мои заказы</string>
+    <string name="menu_favourite">Избранные</string>
+    <string name="menu_message">Сообщения</string>
+    <string name="menu_sale">Скидки</string>
+    <string name="menu_promotion">Акции</string>
+    <string name="menu_setting">Настройки</string>
+    <string name="menu_logout">Выйти</string>
+    <!--    variables for main fragment-->
+    <string name="price_with_stroke"> <strike>228 000 сум</strike> </string>
+    <string name="price_with_stroke1"> <strike>258 000 сум</strike> </string>
+    <string name="price_without_stroke">228 000 сум </string>
+    <string name="productName">Розовое платье с кружевами</string>
+    <string name="brandName">Kids World Shop</string>
+    <string name="news">Новинки</string>
+    <string name="popular_brend">Популярные бренды</string>
+    <string name="recommend">Рекоммендуемые товары</string>
+    <string name="popular_category">Популярные категории</string>
+    <string name="string_offer">Выгодные предложения</string>
+    <string name="string_news">Новости</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="subcategory_text">Выберите подкатегорию</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_sort_by">Сортировать по</string>
+    <string name="text_filter">Фильтр</string>
+    <string name="filter_the_newest">Новейшие</string>
+    <string name="text_filter_popular">Популярный</string>
+    <string name="text_filter_name">Название</string>
+    <string name="text_filter_low_to_high">Цена: от самой низкой к высокой</string>
+    <string name="text_filter_high_to_low">Цена: от самой высокой к самой низкой</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet et nec nibh sem. Mauris cras amet ornare adipiscing ullamcorper. Quam cursus condimentum ut vestibulum urna, hac pulvinar pellentesque sed. Odio velit risus leo sodales.</string>
+    <string name="text_countity">Количество товаров</string>
+    <string name="string_basket">Корзина</string>
+
+    <string-array name="color">
+        <item>Чёрный</item>
+        <item>Оранжевый</item>
+        <item>Синий</item>
+        <item>Красный</item>
+        <item>Белый</item>
+        <item>Жёлтый</item>
+        <item>Зелёный</item>
+        <item>Фиолетовый</item>
+    </string-array>
+    <string-array name="clote_size">
+        <item>18</item>
+        <item>20</item>
+        <item>22</item>
+        <item>24</item>
+        <item>26</item>
+        <item>28</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.menu.orders.onboarding.page.historyData.details.MoreHistoryOrderFragment">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/text_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Заказ №"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/number_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11447034"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/text_order"
+            app:layout_constraintTop_toTopOf="@id/text_order" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="8"
+            android:columnCount="2"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_order"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/text_time_order"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:text="Время заказа:"
+                android:alpha="0.5"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:id="@+id/time_order"
+                android:layout_width="99dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="fill"
+                android:text="20:00 31.12.2020" />
+            <TextView
+                android:id="@+id/text_count"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="Количество:"
+                android:alpha="0.5"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="4"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/text_comments"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                android:text="Комментарии: "
+                android:alpha="0.5"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="75dp"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:text="Lorem ipsum dolor sit \namet, consectetur \nadipiscing elit. Justo" />
+
+            <TextView
+                android:id="@+id/text_address"
+                android:layout_width="116dp"
+                android:layout_marginBottom="12dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:alpha="0.5"
+                android:text="Адрес Доставки:" />
+            <TextView
+                android:id="@+id/address"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="8502 Preston Rd.  \nMaine 98380"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/text_payment_type"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                android:text="Способ Оплаты:"
+                android:alpha="0.5"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/payment_type"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="Payme"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/text_price_product"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="Стоимость товара:"
+                android:alpha="0.5"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/price_product"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                android:text="950 000 сум"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/text_delivery"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="Доставка:"
+                android:alpha="0.5"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/delivery_price"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="15 000 сум"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/text_total"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="12dp"
+                android:text="Итоговая цена:"
+                android:alpha="0.5"
+                android:layout_gravity="fill"/>
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="12dp"
+                android:layout_columnWeight="1"
+                android:text="965 000 сум"
+                android:layout_gravity="fill"/>
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_marginTop="24dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    </androidx.core.widget.NestedScrollView>

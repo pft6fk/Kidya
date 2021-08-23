@@ -42,6 +42,7 @@ class MyDataFragment : Fragment() { //, OnMapReadyCallback
         binding.childAdd.setOnClickListener{
             findNavController().navigate(R.id.action_myDataFragment_to_childAddFragment)
         }
+
         
         //open menu for childRecycler
         adapter.onItemClick = {

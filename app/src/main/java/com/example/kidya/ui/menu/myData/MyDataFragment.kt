@@ -119,6 +119,7 @@ class MyDataFragment : Fragment() { //, OnMapReadyCallback
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Мои данные")
     }
 
     override fun onPause() {

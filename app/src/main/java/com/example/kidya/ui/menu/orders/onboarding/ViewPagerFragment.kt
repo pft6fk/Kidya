@@ -41,6 +41,7 @@ class ViewPagerFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Мои заказы")
     }
 
     override fun onPause() {

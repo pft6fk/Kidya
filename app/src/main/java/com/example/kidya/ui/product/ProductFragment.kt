@@ -86,6 +86,7 @@ class ProductFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Футболки")
     }
 
     override fun onDestroyView() {

@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kidya.MainActivity
 import com.example.kidya.R
 
 import com.example.kidya.databinding.FragmentNewsBinding
@@ -18,6 +19,7 @@ import com.example.kidya.databinding.FragmentNewsBinding
 
 class NewsFragment : Fragment(){
 
+    private lateinit var mainActivity: MainActivity
     private var _binding: FragmentNewsBinding? = null
     private val binding get() = _binding!!
     private lateinit var newsAdapter: NewsAdapter
@@ -27,6 +29,7 @@ class NewsFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        mainActivity = requireActivity() as MainActivity
         _binding = FragmentNewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -48,6 +51,10 @@ class NewsFragment : Fragment(){
     }
 
 
+    override fun onResume() {
+        super.onResume()
+        mainActivity.putTitle("Новости")
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

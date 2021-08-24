@@ -35,6 +35,7 @@ class DeliveryFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Доставка и возврат")
     }
 
     override fun onDestroyView() {

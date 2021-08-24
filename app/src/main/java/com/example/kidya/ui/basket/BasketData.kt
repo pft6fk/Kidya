@@ -2,7 +2,7 @@ package com.example.kidya.ui.basket
 
 import com.example.kidya.R
 
-data class BasketData (val img: Int, val type: String, val brand: String, val color: String, val size: String, val cost: String)
+data class BasketData (val img: Int, val type: String, val brand: String, val color: String, val size: String, val cost: String, var selected: Boolean? = false )
 
 class MockBasket{
     companion object{

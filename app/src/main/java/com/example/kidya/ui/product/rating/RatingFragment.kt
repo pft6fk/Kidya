@@ -49,6 +49,7 @@ class RatingFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Рейтинги и отзывы")
     }
 
     override fun onDestroyView() {

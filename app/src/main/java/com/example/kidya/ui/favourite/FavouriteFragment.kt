@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.kidya.MainActivity
 import com.example.kidya.R
 import com.example.kidya.databinding.FragmentFavouriteBinding
 
 
 class FavouriteFragment : Fragment() {
 
+    private lateinit var mainActivity: MainActivity
     private var _binding: FragmentFavouriteBinding? = null
     private val binding get() = _binding!!
     var adapter = FavouriteAdapter()
@@ -21,6 +23,7 @@ class FavouriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        mainActivity = requireActivity() as MainActivity
         _binding = FragmentFavouriteBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -34,6 +37,12 @@ class FavouriteFragment : Fragment() {
     fun init() = with(binding){
         favouriteRecycler.layoutManager = GridLayoutManager(requireContext(), 2)
         favouriteRecycler.adapter = adapter
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        mainActivity.putTitle("Избранное")
     }
 
 

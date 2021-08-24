@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.kidya.MainActivity
 import com.example.kidya.R
 import com.example.kidya.databinding.FragmentDashboardBinding
 import com.example.kidya.databinding.FragmentNewsBinding
@@ -14,6 +15,7 @@ import com.example.kidya.ui.news.NewsAdapter
 
 class DashboardFragment : Fragment() {
 
+    private lateinit var mainActivity: MainActivity
     private var _binding: FragmentDashboardBinding? = null
     lateinit var categoryAdapter: CategoryAdapter
 
@@ -23,6 +25,7 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        mainActivity = requireActivity() as MainActivity
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -46,5 +49,10 @@ class DashboardFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mainActivity.putTitle("Категории")
     }
 }

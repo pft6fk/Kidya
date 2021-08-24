@@ -46,6 +46,7 @@ class InfoFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Информация о продукте")
     }
     override fun onDestroyView() {
         super.onDestroyView()

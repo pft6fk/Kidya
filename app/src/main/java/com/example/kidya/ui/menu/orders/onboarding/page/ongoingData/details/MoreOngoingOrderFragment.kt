@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kidya.MainActivity
 import com.example.kidya.R
@@ -29,6 +30,10 @@ class MoreOngoingOrderFragment : Fragment() {
         val root: View = binding.root
 
         init()
+
+        binding.makeRefund.setOnClickListener {
+            findNavController().navigate(R.id.action_moreOngoingOrderFragment_to_refundFragment)
+        }
         return root
     }
 
@@ -40,6 +45,7 @@ class MoreOngoingOrderFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Заказ №11447034")
     }
 
     override fun onPause() {

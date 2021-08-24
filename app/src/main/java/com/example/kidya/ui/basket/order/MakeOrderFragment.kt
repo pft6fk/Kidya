@@ -38,6 +38,7 @@ class MakeOrderFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Оформить заказ")
     }
 
 }

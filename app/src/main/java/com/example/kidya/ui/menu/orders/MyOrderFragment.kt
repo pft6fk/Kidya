@@ -10,18 +10,26 @@ import com.example.kidya.R
 import com.example.kidya.databinding.FragmentMyOrderBinding
 
 class MyOrderFragment : Fragment() {
+
+    private lateinit var mainActivity: MainActivity
     private var _binding: FragmentMyOrderBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        mainActivity = requireActivity() as MainActivity
         _binding = FragmentMyOrderBinding.inflate(inflater, container, false)
         val root: View = binding.root
         // Inflate the layout for this fragment
 
 
         return root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mainActivity.putTitle("Мои заказы")
     }
 
 

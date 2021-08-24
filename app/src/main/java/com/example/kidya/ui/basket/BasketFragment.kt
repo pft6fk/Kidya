@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kidya.MainActivity
 import com.example.kidya.R
 import com.example.kidya.databinding.FragmentBasketBinding
 
 class BasketFragment : Fragment() {
 
+    private lateinit var mainActivity: MainActivity
     private var _binding: FragmentBasketBinding? = null
     private val binding get() = _binding!!
     var adapter = BasketAdapter()
@@ -20,7 +22,7 @@ class BasketFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        mainActivity = requireActivity() as MainActivity
         _binding = FragmentBasketBinding.inflate(inflater, container, false)
         val root: View = binding.root
         binding.auth.setOnClickListener {
@@ -44,8 +46,14 @@ class BasketFragment : Fragment() {
         basketRecycler.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         basketRecycler.adapter = adapter
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mainActivity.putTitle("Корзина")
     }
 }

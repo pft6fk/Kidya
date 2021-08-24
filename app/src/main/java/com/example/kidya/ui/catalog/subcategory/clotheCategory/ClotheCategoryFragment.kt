@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.kidya.MainActivity
 import com.example.kidya.R
 import com.example.kidya.databinding.FragmentClotheCategoryBinding
 import com.example.kidya.ui.home.clotheAdapter
@@ -14,6 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ClotheCategoryFragment : Fragment() {
 
+    private lateinit var mainActivity: MainActivity
     private var _binding: FragmentClotheCategoryBinding? = null
     private val binding get() = _binding!!
     lateinit var adapter : clotheAdapter
@@ -22,6 +24,7 @@ class ClotheCategoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        mainActivity = requireActivity() as MainActivity
         _binding = FragmentClotheCategoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
         adapter = clotheAdapter()
@@ -49,6 +52,11 @@ class ClotheCategoryFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mainActivity.putTitle("Футболки")
     }
 
 }

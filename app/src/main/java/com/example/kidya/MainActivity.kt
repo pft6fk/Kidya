@@ -74,10 +74,8 @@ class MainActivity : AppCompatActivity() {
         binding.appBar.newsFragment.visibility = View.GONE
         binding.appBar.notificationFragment.visibility = View.GONE
         binding.appBar.searchIcon.visibility = View.VISIBLE
-        binding.appBar.toolbar.title = "Hello"
-//        binding.appBar.appbarTitle.visibility = View.VISIBLE
 
-
+        binding.appBar.appbarTitle.visibility = View.VISIBLE
     }
 
     fun appBarHomeVisible(){
@@ -86,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         binding.appBar.notificationFragment.visibility = View.VISIBLE
         binding.appBar.searchIcon.visibility = View.GONE
         binding.appBar.toolbar.popupTheme = R.style.PopupMenu
-//        binding.appBar.appbarTitle.visibility = View.GONE
+        binding.appBar.appbarTitle.visibility = View.GONE
     }
 
     fun hideBottomNav(){
@@ -100,6 +98,9 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.nav_host_fragment_activity_main)
         return navController.navigateUp()
+    }
 
+    fun putTitle(title: String){
+        binding.appBar.appbarTitle.text = title
     }
 }

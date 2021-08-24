@@ -48,5 +48,6 @@ class MessagesFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         mainActivity.hideBottomNav()
+        mainActivity.putTitle("Сообщение")
     }
 }

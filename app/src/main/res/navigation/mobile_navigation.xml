@@ -187,7 +187,11 @@
         android:id="@+id/moreOngoingOrderFragment"
         android:name="com.example.kidya.ui.menu.orders.onboarding.page.ongoingData.details.MoreOngoingOrderFragment"
         android:label="MoreOngoingOrderFragment"
-        tools:layout="@layout/fragment_more_ongoing_order"/>
+        tools:layout="@layout/fragment_more_ongoing_order">
+        <action
+            android:id="@+id/action_moreOngoingOrderFragment_to_refundFragment"
+            app:destination="@id/refundFragment" />
+    </fragment>
     <fragment
         android:id="@+id/myDataFragment"
         android:name="com.example.kidya.ui.menu.myData.MyDataFragment"
@@ -228,4 +232,9 @@
         android:name="com.example.kidya.ui.menu.messages.MessagesFragment"
         android:label="fragment_messages"
         tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/refundFragment"
+        android:name="com.example.kidya.ui.menu.orders.onboarding.page.ongoingData.details.refund.RefundFragment"
+        android:label="fragment_refund"
+        tools:layout="@layout/fragment_refund" />
 </navigation>

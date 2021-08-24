@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kidya.MainActivity
 import com.example.kidya.R
 import com.example.kidya.databinding.FragmentSubcategoryBinding
 
 class Subcategory : Fragment() {
+    private lateinit var mainActivity: MainActivity
     val subcategoryAdapter: SubcategoryAdapter = SubcategoryAdapter()
     private var _binding: FragmentSubcategoryBinding? = null
     private val binding get() = _binding!!
@@ -19,6 +21,7 @@ class Subcategory : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        mainActivity = requireActivity() as MainActivity
         _binding = FragmentSubcategoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -40,6 +43,11 @@ class Subcategory : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mainActivity.putTitle("Одежда")
     }
 
 }

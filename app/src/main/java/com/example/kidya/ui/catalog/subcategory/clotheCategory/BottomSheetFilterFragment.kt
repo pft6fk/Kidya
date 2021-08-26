@@ -24,7 +24,22 @@ class BottomSheetFilterFragment : BottomSheetDialogFragment() {
     ): View? {
         _binding = FragmentBottomSheetFilterBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+//        binding.sort1.setOnClickListener{
+//            dismiss()
+//        }
+//        binding.sort2.setOnClickListener{
+//
+//            dismiss()
+//        }
+//        binding.sort3.setOnClickListener{
+//            dismiss()
+//        }
+//        binding.sort4.setOnClickListener{
+//            dismiss()
+//        }
+//        binding.sort5.setOnClickListener{
+//            dismiss()
+//        }
 
         // Inflate the layout for this fragment
         return root

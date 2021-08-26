@@ -2,8 +2,10 @@ package com.example.kidya.ui.basket
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,11 +37,30 @@ class BasketFragment : Fragment() {
             findNavController().navigate(R.id.action_navigation_basket_to_productFragment)
         }
 
+        //showing popup menu
+        adapter.onItemClick={
+            showMenu(binding.basketRecycler.findViewById(R.id.menu), R.menu.popup_more_menu)
+        }
+
+
         binding.order.setOnClickListener {
             findNavController().navigate(R.id.action_navigation_basket_to_orderFragment)
         }
         init()
         return root
+    }
+
+
+    private fun showMenu(v: View, popupMoreMenu: Int) {
+        val popup = PopupMenu(requireContext(), v)
+        popup.menuInflater.inflate(popupMoreMenu, popup.menu)
+
+        popup.setOnDismissListener {
+            // Respond to popup being dismissed.
+        }
+        // Show the popup menu.
+        popup.show()
+
     }
 
     private fun init() = with(binding){

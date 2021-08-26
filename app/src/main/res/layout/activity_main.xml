@@ -60,4 +60,51 @@
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/main_menu" />
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/filter_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/filter_menu"
+                layout="@layout/filter_menu"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/filter_color"
+                android:visibility="gone"
+                layout="@layout/filter_color"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/filter_provider"
+                android:visibility="gone"
+                layout="@layout/filter_provider"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/filter_price"
+                android:visibility="gone"
+                layout="@layout/filter_price"/>
+
+
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
 </androidx.drawerlayout.widget.DrawerLayout>
